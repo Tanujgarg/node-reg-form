@@ -16,7 +16,7 @@ router.post("/", (req,res) => {
                 id: data.id,
                 name: data.name,
                 emai: data.email,
-                mobile: data.mobiile
+                mobile: data.mobile
             });
         }
     });
