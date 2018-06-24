@@ -8,15 +8,37 @@ router.get("/", (req,res) => {
 });
 
 router.post("/", (req,res) => {
-    res.render("user-filled-form", {
-        name: req.body.name,
-        email: req.body.email,
-        mobile: req.body.mobile
+    let profile = new Profile(req.body);
+    profile.save((err, data) => {
+        if(err) return res.send(err);
+        else{
+            res.render("user-filled-form", {
+                id: data.id,
+                name: data.name,
+                emai: data.email,
+                mobile: data.mobiile
+            });
+        }
     });
 });
 router.put("/", (req,res) => {
-    console.log(req.body);
-    res.send(req.body);
+    Profile.findOneAndUpdate({_id:req.body.id}, req.body, {new: true}, (err, data) => {
+        if(error) res.send(err);
+        else{
+            res.send(data);
+        }
+    });
+});
+
+router.delete("/", (req,res) => {
+    Profile.findOneAndRemove({_id:req.body.id}, (err, data) => {
+        if(error) res.send(err);
+        else{
+            res.send({
+                message:"deleted"
+            });
+        }
+    });
 });
 
 module.exports = router;

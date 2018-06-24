@@ -5,6 +5,7 @@ function change(id) {
 }
 
 function submit(){
+    var id = document.getElementById("id").value;
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var mobile = document.getElementById("mobile").value;
@@ -13,6 +14,7 @@ function submit(){
         type:"PUT",
         url: '/',
         data:{
+            id:id,
             name:name,
             email:email,
             mobile:mobile

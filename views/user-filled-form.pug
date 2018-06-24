@@ -10,6 +10,7 @@ html(lang="en")
     body
         center
             h1 Edit or Delete form
+            input(type="text", id="id", value=id, style='display:none')
             input(type="text", id="name" name="name" placeholder="Your name..", value=name, readonly)
             a(onclick='change("name")') Edit
             br
