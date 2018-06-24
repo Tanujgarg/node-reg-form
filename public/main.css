@@ -1,0 +1,26 @@
+body{
+    background-color: bisque;
+}
+input {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 6px;
+    font-size: 25px;
+    font-weight: bolder; 
+}
+button{
+    width: 150px;
+    height: 50px;
+    border-radius: 6px;
+    background-color: brown;
+    font-size: 25px;
+    font-weight: bolder;
+}
+form {
+    padding: 10px;
+}
+a{
+    text-decoration: underline;
+    color: blue;
+}

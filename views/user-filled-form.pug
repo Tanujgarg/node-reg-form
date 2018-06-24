@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Your Data
+        link(rel="stylesheet", href="/main.css")
+        
+    body
+        center
+            h1 Edit or Delete form
+            input(type="text", id="name" name="name" placeholder="Your name..", value=name, readonly)
+            a(onclick='change("name")') Edit
+            br
+            input(type="email", id="email" name="email", placeholder="Your email..", value=email, readonly)
+            a(onclick='change("email")') Edit
+            br
+            input(type="text", id="mobile" name="mobile", placeholder="Your mobile number..", value=mobile, readonly)
+            a(onclick='change("mobile")') Edit
+            br
+            button(type="submit", onclick='submit()') Submit
+    script(src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js")
+    script(src="/main.js")
